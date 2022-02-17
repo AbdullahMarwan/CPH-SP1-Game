@@ -1,0 +1,3 @@
+void ScreenGame() {
+  background(background);
+}
