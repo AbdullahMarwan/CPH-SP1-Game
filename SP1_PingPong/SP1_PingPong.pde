@@ -3,7 +3,7 @@
 
 PImage background; //Background image
 
-int currentScreen = 0;
+int currentScreen = 0; //Int used to change screens
 
 void setup() {
   fullScreen(); //Sets program to fill the whole screen
@@ -12,6 +12,7 @@ void setup() {
   //Loads the background image and resizes it to fit the full screen
   background = loadImage("PongBackground.png");
   background.resize(width, height);
+  
 }
 
 void draw() {
