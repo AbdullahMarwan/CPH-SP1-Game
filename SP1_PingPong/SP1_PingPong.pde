@@ -9,6 +9,14 @@ int currentScreen = 0; //Int used to change screens
 Paddle paddleA;
 Paddle paddleB;
 
+static final PVector paddleAPos = new PVector();
+static final PVector paddleBPos = new PVector();
+
+PVector paddleAVel = new PVector();
+PVector paddleBVel = new PVector();
+
+float paddleSpeed = 10;
+
 void setup() {
   fullScreen(); //Sets program to fill the whole screen
   frameRate(60);

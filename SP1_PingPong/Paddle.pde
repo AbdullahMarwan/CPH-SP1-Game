@@ -1,6 +1,6 @@
 class Paddle {
-  int pXPos;
-  int pYPos;
+  float pXPos;
+  float pYPos;
   int pWidth;
   int pHeight;
   color c;
@@ -14,11 +14,25 @@ class Paddle {
     c = tempC;
   }
 
-  void display() {
+  void displayA() {
     stroke(0);
     fill(c);
     rectMode(CENTER);
+    //rect(pXPos, pYPos, pWidth, pHeight);
     rect(pXPos, pYPos, pWidth, pHeight);
+    pYPos = paddleAPos.y;
+    paddleAPos.add(paddleAVel);
+    paddleAPos.y = constrain(paddleAPos.y, 0, height);
+  }
+  
+    void displayB() {
+    stroke(0);
+    fill(c);
+    rectMode(CENTER);
+    //rect(pXPos, pYPos, pWidth, pHeight);
+    rect(pXPos, pYPos, pWidth, pHeight);
+    paddleBPos.add(paddleBVel);
+    paddleBPos.y = constrain(paddleBPos.y, 0, height);
   }
 
 }
